@@ -5,4 +5,4 @@ const router = express.Router()
 
 router.get('/all', controller.getCategories)
 
-export default router
+export default router 
