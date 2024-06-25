@@ -10,7 +10,7 @@ export const getPostsService = () => new Promise(async(resolve, reject) => {
                 { model: db.Attribute, as: 'attributes', attributes: ['price', 'acreage', 'published', 'hashtag'] },
                 { model: db.User, as: 'users', attributes: ['name', 'phone', 'zalo'] },
             ],
-            attributes: ['id', 'title', 'star', 'address', 'description']
+            attributes: ['id', 'title', 'star', 'address', 'description', 'categoryCode']
         })
         resolve({
             err: response ? 0 : 1,
@@ -22,12 +22,12 @@ export const getPostsService = () => new Promise(async(resolve, reject) => {
     }
 })
 
-export const getPostsLimitService = (offset) => new Promise(async(resolve, reject) => {
+export const filterPrices = (query) => new Promise(async(resolve, reject) => {
     try {
         const response = await db.Post.findAndCountAll({
+            where: query,
             raw: true,
             nest: true,
-            offset: offset * (+process.env.LIMIT) || 0,
             limit: +process.env.LIMIT,
             include: [
                 { model: db.Image, as: 'images', attributes: ['image'] },
@@ -45,3 +45,4 @@ export const getPostsLimitService = (offset) => new Promise(async(resolve, rejec
         reject(error)
     }
 })
+

@@ -14,7 +14,7 @@ module.exports = {
       },
       star: {
         type: Sequelize.STRING,
-        defaultValue: '0'
+        defaultValue: "0"
       },
       labelCode: {
         type: Sequelize.STRING
@@ -26,6 +26,15 @@ module.exports = {
         type: Sequelize.STRING
       },
       categoryCode: {
+        type: Sequelize.STRING
+      },
+      priceCode: {
+        type: Sequelize.STRING
+      },
+      acreageCode: {
+        type: Sequelize.STRING
+      },
+      provinceCode: {
         type: Sequelize.STRING
       },
       description: {
