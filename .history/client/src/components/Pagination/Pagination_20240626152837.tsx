@@ -16,9 +16,9 @@ const Pagination = ({ data = []}) => {
       arr?.filter((item:any)=>{
         const price = getNumberFromString( item?.attributes?.price)
         
-        // console.log(price);
+        console.log(price);
         if( price !== null && minPrice < price && price < maxPrice ){
-          // console.log(item);
+          console.log(item);
           
           return item
         }

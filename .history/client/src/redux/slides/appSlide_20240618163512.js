@@ -4,8 +4,7 @@ const initState = {
     msg:'',
     categories: [],
     price: [],
-    acreage: [],
-    province: []
+    acreage: []
 }
 
 const appSlide = (state = initState, action) => {
@@ -28,12 +27,6 @@ const appSlide = (state = initState, action) => {
                 categories: action.acreage || [],
                 msg: action.msg || '',
             }
-            case actionTypes.GET_PROVINCE:
-                return{
-                    ...state,
-                    province: action.province || [],
-                    msg: action.msg || '',
-                }
         default:
             return state;
     }

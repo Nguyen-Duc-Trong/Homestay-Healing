@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import InputSearch from '../../components/InputSearch/InputSearch.tsx'
 import icons from '../../ultils/icons.js'
 import Button from '../../components/Button/Button.tsx'
-import Modal from './component/Modal.tsx'
+import Modal from './component/modal.tsx'
 import { setProvince } from '../../redux/slides/provinceSlide.js'
 import { apiGetProvinces } from '../../service/province.js'
 

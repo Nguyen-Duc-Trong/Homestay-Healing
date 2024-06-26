@@ -7,7 +7,7 @@ import icons from '../../ultils/icons.js'
 const {FaArrowLeft, FaArrowRight} = icons
 const Pagination = ({ data = []}) => {
   const {area,minPrice,maxPrice,minAcreage,maxAcreage} = useSelector((state:any) => state.search)
-  // console.log(area,minPrice,maxPrice,minAcreage,maxAcreage);
+  console.log(area,minPrice,maxPrice,minAcreage,maxAcreage);
   const activeItem = useSelector((state: any) => state.main1.activeItem); 
   const [newData , setNewData] = useState([])
   const [isLoading, setIsLoading] = useState(true); 
@@ -16,9 +16,9 @@ const Pagination = ({ data = []}) => {
       arr?.filter((item:any)=>{
         const price = getNumberFromString( item?.attributes?.price)
         
-        // console.log(price);
+        console.log(price);
         if( price !== null && minPrice < price && price < maxPrice ){
-          // console.log(item);
+          console.log(item);
           
           return item
         }

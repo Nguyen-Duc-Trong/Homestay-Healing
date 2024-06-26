@@ -6,6 +6,7 @@ import { apiLogin, apiRegister } from "../../service/auth.js";
 import { actionTypes } from '../../redux/actions/actionTypes.js';
 import {useDispatch, useSelector} from 'react-redux'
 import {setActiveItem} from "../../redux/slides/main1Slice.js"
+import Swal from 'sweetalert2'
 
 const LoginPage = () => {
   const location = useLocation()

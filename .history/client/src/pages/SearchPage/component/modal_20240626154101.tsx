@@ -4,7 +4,7 @@ import icons from '../../../ultils/icons'
 
 const { FaArrowLeft} = icons
 
-const Modal = () => {
+const modal = () => {
   const {getProvince} = useSelector((state:any)=> state.province)
 
   return (
@@ -27,4 +27,4 @@ const Modal = () => {
   )
 }
 
-export default Modal
+export default modal

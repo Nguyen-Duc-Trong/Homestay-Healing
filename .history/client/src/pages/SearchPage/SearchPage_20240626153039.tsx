@@ -3,8 +3,8 @@ import {useDispatch, useSelector} from 'react-redux'
 import InputSearch from '../../components/InputSearch/InputSearch.tsx'
 import icons from '../../ultils/icons.js'
 import Button from '../../components/Button/Button.tsx'
-import Modal from './component/Modal.tsx'
-import { setProvince } from '../../redux/slides/provinceSlide.js'
+import Modal from './component/modal.tsx'
+import { provinceSlide } from '../../redux/slides/provinceSlide.js'
 import { apiGetProvinces } from '../../service/province.js'
 
 const {MdOutlineNavigateNext, TfiLocationPin, RiMoneyDollarCircleLine, SlCrop, FaRegBuilding, LuDelete, CiSearch} = icons
@@ -14,7 +14,8 @@ const SearchPage = () => {
   useEffect(() => {
     const getProvince = async() => {
       const response = await apiGetProvinces()
-      dispatch(setProvince(response.data?.response))
+      console.log(response);
+      
     }
     getProvince()
   }, [])

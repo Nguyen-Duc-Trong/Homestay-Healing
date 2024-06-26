@@ -8,7 +8,6 @@ import main1Slice from './slides/main1Slice';
 import postSlides from './slides/postSlides';
 import appSlide from './slides/appSlide';
 import searchSlide from './slides/searchSlide'
-import provinceSlide from './slides/provinceSlide';
 import autoMergeLevel2 from "redux-persist/es/stateReconciler/autoMergeLevel2"
 
 const commonConfig = {
@@ -26,7 +25,6 @@ const rootReducer = combineReducers({
     main1 : main1Slice,
     post: postSlides,
     app: appSlide,
-    search: searchSlide,
-    province: provinceSlide
+    search: searchSlide
 })
 export default rootReducer

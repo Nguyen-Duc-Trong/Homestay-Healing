@@ -1,16 +1,13 @@
 import React from 'react'
-import {useSelector} from 'react-redux'
 import icons from '../../../ultils/icons'
 
 const { FaArrowLeft} = icons
 
-const Modal = () => {
-  const {getProvince} = useSelector((state:any)=> state.province)
-
+const modal = () => {
   return (
     <div className='fixed top-[0px] left-0 right-0 h-screen w-[100%] z-[1000] bg-[#00000080] flex justify-center '>
         <div className='w-[700px] top-[70px] bg-[#fff] max-h-[500px] absolute rounded-[8px]'>
-            <div className='h-[45px] rounded text-center justify-between flex items-center px-[10px] border-b-[1px] border-[#ddd]'>
+            <div className='h-[45px] rounded text-center justify-between flex items-center px-[10px] border-b-[1px]'>
               <span>
                 <FaArrowLeft size={20}/>
               </span>
@@ -19,7 +16,7 @@ const Modal = () => {
               </span>
               <span className='w-[25px]'></span>
             </div>
-            <div className='py-[10px] px-[25px]'>
+            <div>
               content
             </div>
         </div>
@@ -27,4 +24,4 @@ const Modal = () => {
   )
 }
 
-export default Modal
+export default modal

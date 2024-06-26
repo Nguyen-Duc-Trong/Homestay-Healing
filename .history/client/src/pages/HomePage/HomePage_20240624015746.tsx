@@ -14,6 +14,9 @@ const HomePage = () => {
           Kênh thông tin Homestay số 1 Việt Nam - Website đăng tin cho thuê phòng trọ, nhà nguyên căn, căn hộ, ở ghép nhanh, hiệu quả với 100.000+ tin đăng và 2.500.000 lượt xem mỗi tháng.
         </p>
       </div>
+      {/* <div className='mb-[20px]'>
+        <ProminentArea />
+      </div> */}
       <div className='flex justify-around mb-[50px]'>
         <PostingList/>
       </div>
