@@ -20,7 +20,7 @@ const Modal = () => {
               <span className='w-[25px]'></span>
             </div>
             <div className='py-[10px] px-[25px]'>
-
+              
             </div>
         </div>
     </div>
