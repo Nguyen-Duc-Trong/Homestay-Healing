@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.star-item{
+    display: inline-block;
+    vertical-align: top;
+}
+
+button.slick-arrow::before{
+    color: #ffba00;
+    font-size: 50px;
+}
+
+.slick-next{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: 35px !important;
+}
+
+.slick-prev{
+    position: absolute;
+    z-index: 10;
+    left: 5px !important;
+}
