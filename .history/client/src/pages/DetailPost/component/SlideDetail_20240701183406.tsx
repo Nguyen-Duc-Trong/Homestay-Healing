@@ -1,0 +1,27 @@
+import React from 'react'
+import Slider from "react-slick";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
+
+const SlideDetail = ({images}:any) => {
+  return (
+    <Slider {...settings}>
+      <div className='w-full flex'>
+        <div>
+          {images.map((image: any, index: any) => (
+            <img key={index} src={image} alt={`Image ${index}`} />
+          ))}
+        </div>
+      </div>
+     
+    </Slider> 
+  )
+}
+
+export default SlideDetail
