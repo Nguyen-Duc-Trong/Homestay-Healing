@@ -1,6 +1,7 @@
 import actionTypes from './actionTypes'
 import { apiRegister, apiLogin } from '../../service/auth'
 import {changeInfo} from "../../service/changeInfo"
+
 export const register = (payload) => async (dispatch) => {
     try {
         const response = await apiRegister(payload)
@@ -44,6 +45,7 @@ export const login = (payload) => async (dispatch) => {
         })
     }
 }
+<<<<<<< HEAD
 // <<<<<<< HEAD
 // export const ChangeInfo= (payload) => async (dispatch) => {
 //     try {
@@ -62,3 +64,20 @@ export const login = (payload) => async (dispatch) => {
 // export const logout = () => ({
 //     type: actionTypes.LOGOUT
 // })
+=======
+export const ChangeInfo= (payload) => async (dispatch) => {
+    try {
+        const response = await changeInfo(payload)
+        // console.log(response);
+        dispatch({
+            type: actionTypes.CHANGE_INFO,
+            data: response.data
+        })
+    } catch (error) {
+        alert(error)
+    }
+}
+export const logout = () => ({
+    type: actionTypes.LOGOUT
+})
+>>>>>>> a6831fb7af1bf09c532a5383aa041c09b1d64c53

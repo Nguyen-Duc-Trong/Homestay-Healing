@@ -1,1 +1,0 @@
-INSERT INTO categorys (code, value, header, subheader, createdAt, updatedAt)

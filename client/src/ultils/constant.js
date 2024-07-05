@@ -4,18 +4,11 @@ export const path = {
     LOGIN: '/login',
     CHO_THUE_CAN_HO: '/cho-thue-can-ho',
     CHO_THUE_PHONG_TRO: '/cho-thue-phong-tro',
-    NHA_CHO_THUE: '/nha-cho-thue'
+    NHA_CHO_THUE: '/nha-cho-thue',
+    DETAIL_POST_TITLE_POSTID: 'chi-tiet/:title/:postId'
 }
 
 
-// export const formatVietnameseToString = (keyword) => {
-//     return keyword
-//         .toLowerCase()
-//         .normalize("NFD")
-//         .replace(/[\u0300-\u036f]/g, "")
-//         .split(" ")
-//         .join("-")
-// }
 
 export const location = [
     {

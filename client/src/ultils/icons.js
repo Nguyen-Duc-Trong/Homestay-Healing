@@ -7,6 +7,7 @@ import { LuDelete } from "react-icons/lu";
 import { CiSearch } from "react-icons/ci";
 import { IoStarSharp } from "react-icons/io5";
 import { GoHeart, GoHeartFill } from "react-icons/go";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const icons = {
     MdOutlineNavigateNext,
@@ -18,7 +19,8 @@ const icons = {
     CiSearch,
     IoStarSharp,
     GoHeart,
-    GoHeartFill
+    GoHeartFill,
+    FaArrowLeft,FaArrowRight
 }
 
 export default icons

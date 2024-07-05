@@ -6,6 +6,7 @@ import {personalRoutes} from "./routes/personalRoutes"
 import PersonalPage from './pages/PersonalPage/PersonalPage.tsx'
 import Header from './components/DefaultLayOut/Header/Header.tsx'
 import SearchPage from './pages/SearchPage/SearchPage.tsx'
+import ProminentArea from './components/ProminentArea/ProminentArea.tsx'
 
  const App = () => {
   // console.log(personalRoutes)
@@ -21,6 +22,7 @@ import SearchPage from './pages/SearchPage/SearchPage.tsx'
                     return (
                       <DefaultLayOut>
                         <SearchPage/>
+                        <ProminentArea />
                         {children}
                       </DefaultLayOut>
                     );
@@ -61,7 +63,7 @@ import SearchPage from './pages/SearchPage/SearchPage.tsx'
                 )
               })
             }
-             {personalRoutes.map((it) => {
+            {personalRoutes.map((it) => {
             const PageChild = it.PageChild;
                 return (
                   <Route key={it.path} path={it.path} element={
@@ -70,8 +72,8 @@ import SearchPage from './pages/SearchPage/SearchPage.tsx'
                     </PersonalPage>
                     }/>
                 );
-          })}
-                </Routes>
+            })}
+                  </Routes>
         </Router>
     </div>
   )

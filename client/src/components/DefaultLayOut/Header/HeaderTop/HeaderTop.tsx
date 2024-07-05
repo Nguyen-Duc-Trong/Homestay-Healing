@@ -32,7 +32,7 @@ const gotohome = ()=>{
         <div  className='header-container flex justify-between h-[70px] items-center'>
           {/* //////// LOGO /////////// */}
           <div className='header-logo'>
-              <div onClick={gotohome}  className="flex flex items-center justify-around ">
+              <div onClick={gotohome}  className="flex flex items-center justify-around cursor-pointer">
                 <img className='logo-img w-[50px]' src={logo} alt="Logo " />
                 <h1 className="text-[1.2rem] font-[900] text-[#4f5091]">HOMESTAY HEALING</h1>
               </div>

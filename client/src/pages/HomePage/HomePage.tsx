@@ -1,6 +1,7 @@
-import React from 'react'
+import React ,{useState ,useEffect} from 'react'
 import ProminentArea from '../../components/ProminentArea/ProminentArea.tsx'
 import PostingList from './components/PostingList.tsx'
+import Sidebar from './components/Sidebar.tsx'
 
 const HomePage = () => {
   return (
@@ -13,17 +14,12 @@ const HomePage = () => {
           Kênh thông tin Homestay số 1 Việt Nam - Website đăng tin cho thuê phòng trọ, nhà nguyên căn, căn hộ, ở ghép nhanh, hiệu quả với 100.000+ tin đăng và 2.500.000 lượt xem mỗi tháng.
         </p>
       </div>
-      <div className='mb-[20px]'>
+      {/* <div className='mb-[20px]'>
         <ProminentArea />
+      </div> */}
+      <div className='flex justify-around mb-[50px]'>
+        <PostingList/>
       </div>
-      <section className='flex justify-around'>
-        <div className='bg-[#fff] w-[70%] mr-[10px]'>
-          <PostingList/>
-        </div>
-        <div className='bg-red-500 w-[30%]'>
-          Hihi
-        </div>
-      </section>
     </section>
   )
 }

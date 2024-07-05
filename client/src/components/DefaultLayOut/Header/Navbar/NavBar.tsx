@@ -3,6 +3,7 @@ import {Link } from "react-router-dom"
 import { FaRegHeart } from "react-icons/fa";
 import {useSelector,useDispatch} from "react-redux"
 import {setActiveItem} from "../../../../redux/slides/main1Slice.js"
+
 const Navbar = ({setNav}) => {
     const dispatch = useDispatch();
     const activeItem = useSelector((state: any) => state.main1.activeItem); 
