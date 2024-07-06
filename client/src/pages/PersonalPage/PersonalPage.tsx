@@ -11,7 +11,7 @@ import { IoIosLogOut } from "react-icons/io";
 import {Link, useNavigate} from "react-router-dom"
 import logo from "../../assets/imgs/logo/logoPerson.png"
 import {useSelector,useDispatch} from "react-redux"
-import { setActiveItemNav ,setActiveItem} from "../../../src/redux/slides/main1Slice.js"
+import { setActiveItemNav ,setActiveItem} from "../../../src/redux/slides/main1Slide.js"
 import { actionTypes } from '../../redux/actions/actionTypes.js';
 
 const PersonalPage = ({children}) => {

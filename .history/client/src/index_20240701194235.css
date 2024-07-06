@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.star-item{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.slick-prev, .slick-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border-radius: 10rem;
+    background-color: brown;
+}
