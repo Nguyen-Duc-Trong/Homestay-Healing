@@ -1,0 +1,2 @@
+export const getNumbersPrice = (string) => string.split(' ').map(item => +item).filter(item => !isNaN(item) && item !== 0);
+export const getNumbersArea = (string) => string.split(' ').map(item => +item.match(/\d+/)).filter(item => item !== 0)

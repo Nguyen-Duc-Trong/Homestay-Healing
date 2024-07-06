@@ -90,7 +90,9 @@ const PersonalPage = ({children}) => {
                         </Link>
                         {
                             rules === "admin" ?
-                            <button className=' px-[10px] py-[5px] m-[5px] hover:bg-red-400 bg-red-500 text-white font-[700]'>Đăng tin </button>
+                            <Link to={`/personal/DepositMoney/posting`}>
+                                <button className=' px-[10px] py-[5px] m-[5px] hover:bg-red-400 bg-red-500 text-white font-[700]'>Đăng tin </button>
+                            </Link>
                             : 
                             <div className=""></div>
                         }
