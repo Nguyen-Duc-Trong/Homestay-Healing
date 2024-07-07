@@ -26,6 +26,13 @@ const PersonalPage = ({children}) => {
     const handleHeaderActive = (id: number) => {
         dispatch(setActiveItemNav(id));
     };
+     const info = {
+        username : "TMC",
+        sdt : "123456789",   
+        mathanhvien : "987654321",
+        tkchinh : "1000000",
+        // avatar :  avatar,
+    }
     const changeTittle = () => {
         let title = " ";
         switch (activeItemNav) {

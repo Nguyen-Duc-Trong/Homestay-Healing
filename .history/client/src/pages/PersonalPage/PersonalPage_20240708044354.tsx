@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import Navbar from '../../components/DefaultLayOut/Header/Navbar/NavBar.tsx'
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { SlNote } from "react-icons/sl";
@@ -26,6 +26,13 @@ const PersonalPage = ({children}) => {
     const handleHeaderActive = (id: number) => {
         dispatch(setActiveItemNav(id));
     };
+     const info = {
+        username : "TMC",
+        sdt : "123456789",   
+        mathanhvien : "987654321",
+        tkchinh : "1000000",
+        // avatar :  avatar,
+    }
     const changeTittle = () => {
         let title = " ";
         switch (activeItemNav) {
