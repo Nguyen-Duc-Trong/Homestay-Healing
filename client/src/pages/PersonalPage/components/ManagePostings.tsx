@@ -56,7 +56,7 @@ const ManagePostings = () => {
           </Link>
           </div>
         </div>
-        <h1>Tổng số bài đăng : {data && data.length > 0 ? data.length : 0}  bài</h1>
+        <h1>Tổng số bài đăng : <span className="text-[red]">{data && data.length > 0 ? data.length : 0}</span>   bài</h1>
         <table className='w-[100%]  m-[5px] p-[5px]' >
           <thead className=' border-[2px]'>
             <tr>						

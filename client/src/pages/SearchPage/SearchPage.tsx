@@ -64,7 +64,7 @@ const SearchPage = () => {
     const queryCodes = Object.entries(queries).filter((item:any) => item[0].includes('Code'))
     let queryCodeObj = {}
     queryCodes.forEach((item:any) => {queryCodeObj[item[0]] = item[1]})
-    // console.log(queryCodes);
+    console.log(queryCodes);
     dispatch(setPostLimit(queryCodeObj))
   }
   
