@@ -19,14 +19,14 @@ const ManagePostings = () => {
   useEffect(  () => {
     getPost()
   },[]) 
-    console.log(data);
+    // console.log(data);
     
   const handleDeletePost = async (id:any)=>{
     const response = await apiDeletePost({idPost :id})
     if (response.status === 200) {
       alert("Bạn dã xóa thành công bài đăng!")
     }
-    console.log(response);
+    // console.log(response);
     getPost()
     
   }
