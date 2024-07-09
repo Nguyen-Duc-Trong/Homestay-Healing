@@ -42,7 +42,7 @@ const LoginPage = () => {
       alert("bạn điền thiếu thông tin")
 
   }}else{
-    if( payload.password && payload.phone){
+    if( payload.password || payload.phone){
     try {
       const response = await apiLogin(payload);
       if (!response?.data?.checkPhone) {
@@ -74,12 +74,8 @@ const LoginPage = () => {
       alert(error)
       dispatch({ type: actionTypes.LOGIN_FAIL, data: error.msg });
     }
-  }else if( !payload.password && !payload.phone){
-    alert("bạn điền thiếu thông tin!")
   }else if( payload.password && !payload.phone){
-    alert("bạn điền thiếu số điện thoại!")
-  }else if( !payload.password && payload.phone){
-    alert("bạn điền thiếu mật khẩu!")
+    alert("bạn điền thiếu thông tin")
   }
 }
 }

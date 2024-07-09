@@ -55,7 +55,7 @@ export const loginService = ({phone, password}) => new Promise(async(resolve, re
             checkPhone : user ? true : false , 
             checkPass : isCorrectPassword ? true : false,
             err: token ? 0 : 2,
-            // msg: token ? 'Đăng nhập thành công' : response ? 'Sai mật khẩu' : 'Số điện thoại chưa tồn tại',
+            msg: token ? 'Đăng nhập thành công' : response ? 'Sai mật khẩu' : 'Số điện thoại chưa tồn tại',
             token: token || null,
             username: token ? user.name : " ",
             phone: token ? user.phone : " ",

@@ -54,16 +54,16 @@ export const loginService = ({phone, password}) => new Promise(async(resolve, re
         resolve({
             checkPhone : user ? true : false , 
             checkPass : isCorrectPassword ? true : false,
-            err: token ? 0 : 2,
+            // err: token ? 0 : 2,
             // msg: token ? 'Đăng nhập thành công' : response ? 'Sai mật khẩu' : 'Số điện thoại chưa tồn tại',
-            token: token || null,
-            username: token ? user.name : " ",
-            phone: token ? user.phone : " ",
-            id: token ? user.id : " ",
-            rules: token ? user.rules : " ",
-            money: token ? user.money : " ",
-            zalo: token ? user.zalo : " ",
-            avatar: token ? user.avatar : " ",
+            // token: token || null,
+            // username: token ? user.name : " ",
+            // phone: token ? user.phone : " ",
+            // id: token ? user.id : " ",
+            // rules: token ? user.rules : " ",
+            // money: token ? user.money : " ",
+            // zalo: token ? user.zalo : " ",
+            // avatar: token ? user.avatar : " ",
         })
     }catch(error){
         reject(error)
