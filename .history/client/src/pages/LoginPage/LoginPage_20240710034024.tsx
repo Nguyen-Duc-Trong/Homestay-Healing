@@ -45,41 +45,24 @@ const LoginPage = () => {
     if( payload.password && payload.phone){
     try {
       const response = await apiLogin(payload);
-      if (!response?.data?.checkPhone) {
-        alert("Bạn điền sai số điện thoại!")        
-      }else if(!response?.data?.checkPass){
-        alert("Bạn điền sai mật khẩu!")
-      }else if(response?.data?.checkPhone && response?.data?.checkPass){
-          dispatch({ type: actionTypes.LOGIN_SUCCESS, data: response.data })
-          navigate('/');
-          dispatch(setActiveItem(1))
-          alert("Đăng nhập thành công!")
-      }else{
-          dispatch({type : actionTypes.LOGOUT})
-          alert(response.data.msg)
-      }
-      // console.log(response);
+      console.log(response);
       
-      // if(response.data.err === 0 ){       
-      //   dispatch({ type: actionTypes.LOGIN_SUCCESS, data: response.data })
-      //    navigate('/');
-      //   dispatch(setActiveItem(1))
-      //    alert("Đăng nhập thành công!")
-      // }else{
-      //   dispatch({type : actionTypes.LOGOUT})
-      //   alert(response.data.msg)
+      if(response.data.err === 0 ){       
+        dispatch({ type: actionTypes.LOGIN_SUCCESS, data: response.data })
+         navigate('/');
+        dispatch(setActiveItem(1))
+         alert("Đăng nhập thành công!")
+      }else{
+        dispatch({type : actionTypes.LOGOUT})
+        alert(response.data.msg)
 
-      // };
+      };
     } catch (error) {
       alert(error)
-      dispatch({ type: actionTypes.LOGIN_FAIL, data: error.msg });
+      // dispatch({ type: actionTypes.LOGIN_FAIL, data: error.msg });
     }
-  }else if( !payload.password && !payload.phone){
-    alert("bạn điền thiếu thông tin!")
   }else if( payload.password && !payload.phone){
-    alert("bạn điền thiếu số điện thoại!")
-  }else if( !payload.password && payload.phone){
-    alert("bạn điền thiếu mật khẩu!")
+    alert("bạn điền thiếu thông tin")
   }
 }
 }
