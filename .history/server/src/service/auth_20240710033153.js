@@ -52,10 +52,9 @@ export const loginService = ({phone, password}) => new Promise(async(resolve, re
         const isCorrectPassword = user && bcrypt.compareSync(password, user.password)
         const token = isCorrectPassword && jwt.sign({id: user.id, phone: user.phone}, process.env.SECRET_KEY, {expiresIn: '1d'})
         resolve({
-            checkPhone : user ? true : false , 
             checkPass : isCorrectPassword ? true : false,
             err: token ? 0 : 2,
-            // msg: token ? 'Đăng nhập thành công' : response ? 'Sai mật khẩu' : 'Số điện thoại chưa tồn tại',
+            msg: token ? 'Đăng nhập thành công' : response ? 'Sai mật khẩu' : 'Số điện thoại chưa tồn tại',
             token: token || null,
             username: token ? user.name : " ",
             phone: token ? user.phone : " ",

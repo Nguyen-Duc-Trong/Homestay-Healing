@@ -58,7 +58,7 @@ const LoginPage = () => {
           dispatch({type : actionTypes.LOGOUT})
           alert(response.data.msg)
       }
-      // console.log(response);
+      console.log(response);
       
       // if(response.data.err === 0 ){       
       //   dispatch({ type: actionTypes.LOGIN_SUCCESS, data: response.data })
@@ -74,12 +74,8 @@ const LoginPage = () => {
       alert(error)
       dispatch({ type: actionTypes.LOGIN_FAIL, data: error.msg });
     }
-  }else if( !payload.password && !payload.phone){
-    alert("Bạn điền thiếu thông tin!")
   }else if( payload.password && !payload.phone){
-    alert("Bạn điền thiếu số điện thoại!")
-  }else if( !payload.password && payload.phone){
-    alert("Bạn điền thiếu mật khẩu!")
+    alert("bạn điền thiếu thông tin")
   }
 }
 }

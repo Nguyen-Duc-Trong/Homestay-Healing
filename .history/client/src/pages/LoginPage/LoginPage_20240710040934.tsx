@@ -74,12 +74,10 @@ const LoginPage = () => {
       alert(error)
       dispatch({ type: actionTypes.LOGIN_FAIL, data: error.msg });
     }
-  }else if( !payload.password && !payload.phone){
-    alert("Bạn điền thiếu thông tin!")
   }else if( payload.password && !payload.phone){
-    alert("Bạn điền thiếu số điện thoại!")
+    alert("bạn điền thiếu số điện thoại!")
   }else if( !payload.password && payload.phone){
-    alert("Bạn điền thiếu mật khẩu!")
+    alert("bạn điền thiếu mật khẩu!")
   }
 }
 }
