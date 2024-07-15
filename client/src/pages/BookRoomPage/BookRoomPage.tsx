@@ -15,7 +15,7 @@ import { formatVietnameseToString } from '../../ultils/Common/formatVietnameseTo
 
 const {FaTrashCan, PiShoppingCart} = icons
 
-const Favourite = () => {
+const BookRoomPage = () => {
   const navigate = useNavigate()
   const [listFavorite, setListFavorite] = useState<string[]>([])
   const {id} = useSelector((state:any) => state.auth)
@@ -122,5 +122,5 @@ const handleChange = (item:any) => {
   )
 }
 
-export default Favourite;
+export default BookRoomPage;
 
