@@ -1,6 +1,7 @@
 
 import HomePage from "../pages/HomePage/HomePage.tsx";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage.tsx";
+import FavouritePage from "../pages/Favourite/FavouritePage.tsx";
 import LoginPage from "../pages/LoginPage/LoginPage.tsx";
 import PersonalPage from "../pages/PersonalPage/PersonalPage.tsx";
 import RentingRoom from '../pages/RentingRoom/RentingRoom.tsx'

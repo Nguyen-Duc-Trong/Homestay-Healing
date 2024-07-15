@@ -139,8 +139,6 @@ const PopupBookRoom = ({ setIsShowBookRoom, item }) => {
 
 export default memo(PopupBookRoom)
 
-
-// import React, { useState, memo, useEffect } from 'react';
 // import icons from '../../../ultils/icons';
 // import { useSelector } from 'react-redux';
 // import Button from '../../../components/Button/Button.tsx';
