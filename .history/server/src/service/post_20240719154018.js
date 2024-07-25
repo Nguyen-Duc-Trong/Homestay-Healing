@@ -112,7 +112,7 @@ export const posting  = (data) => new Promise(async (resolve, reject) => {
 
 export const deletePost = async ({idPost}) => {
     try {
-        // console.log(idPost);
+        console.log(idPost);
       const result = await db.Post.destroy({
         where: {
           id: idPost
