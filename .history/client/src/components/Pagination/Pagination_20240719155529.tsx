@@ -13,7 +13,6 @@ const Pagination = ({ data = []}) => {
   const activeItem = useSelector((state: any) => state.main1.activeItem); 
   const [newData , setNewData] = useState([])
   const [isLoading, setIsLoading] = useState(true); 
-  
   const checkSearch = (arr:any ,postLimit:any)=>{
       const isEmptyObject = (obj:any) => {
         return Object.keys(obj).length === 0;

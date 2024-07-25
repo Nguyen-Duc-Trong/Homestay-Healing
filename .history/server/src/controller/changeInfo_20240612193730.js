@@ -3,7 +3,7 @@ export const changeInfo = async (req, res) => {
     try {
         const response = await changeInfoService.changeInfo(req);
         // console.log(req.file);
-        // console.log(response);
+        console.log(response);
         return res.status(200).json(response);
     } catch (error) {
         console.error("Error in controller:", error);
